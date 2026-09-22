@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { chromium } from 'playwright'
 
 const base = process.env.APP_URL || 'http://localhost:4173'
+console.log('BASE', base)
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 390, height: 844 } })
 const errors = []

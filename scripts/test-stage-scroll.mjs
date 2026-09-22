@@ -5,6 +5,7 @@ import { chromium } from 'playwright'
 // el scroll de la pagina ni del dialogo, pero el resto del dialogo sigue
 // scrolleando con normalidad.
 const base = process.env.APP_URL || 'http://localhost:4173'
+console.log('BASE', base)
 const browser = await chromium.launch()
 const context = await browser.newContext({
   viewport: { width: 390, height: 844 },
