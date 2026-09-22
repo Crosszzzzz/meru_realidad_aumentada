@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 import { ArrowDown, ArrowUpRight, Box, Egg, ScanLine, Wheat } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { BrandMark } from '@/components/brand'
 import { DishDialog, type ViewerIntent } from '@/components/dish-dialog'
 import { InfoDialog } from '@/components/info-dialog'
 import { restaurant, signatureDish as dish, formatPrice } from '@/data/menu'
@@ -28,7 +27,7 @@ export default function App() {
       <a className="skip-link" href="#menu">Ir al menú</a>
       <div className="site-shell">
         <header className="site-header">
-          <a className="wordmark" href="#" aria-label="Mesa, inicio">{restaurant.name}<BrandMark /></a>
+          <a className="wordmark" href="#" aria-label="Mesa, inicio">{restaurant.name}</a>
           <p className="header-tagline">{restaurant.tagline}</p>
           <InfoDialog />
         </header>
@@ -79,7 +78,6 @@ export default function App() {
           </article>
 
           <section className="perspective-note" aria-label="Sobre la experiencia">
-            <BrandMark />
             <p>Antes del primer bocado.<br /><em>Míralo de cerca.</em></p>
             <span>Gira el plato. Acércate.<br />Descubre lo que vas a pedir.</span>
           </section>
