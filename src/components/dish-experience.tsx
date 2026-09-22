@@ -138,7 +138,7 @@ export default function DishExperience({ intent }: { intent: ViewerIntent }) {
             exposure="1.05"
             environment-image="neutral"
             interaction-prompt="none"
-            touch-action="pan-y"
+            touch-action="none"
             disable-pan
             loading="eager"
             reveal="auto"
