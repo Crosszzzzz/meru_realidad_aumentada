@@ -1,4 +1,4 @@
-import { Box, ScanLine, Move } from 'lucide-react'
+import { ArrowUpRight, Box, ScanLine, Move } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 
@@ -12,7 +12,7 @@ export function InfoDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="ghost" className="how-link">Cómo funciona <span aria-hidden="true">↗</span></Button>
+        <Button variant="ghost" className="how-link">Cómo funciona <ArrowUpRight size={15} strokeWidth={2.2} aria-hidden="true" /></Button>
       </DialogTrigger>
       <DialogContent className="info-dialog">
         <p className="eyebrow">A TU GUSTO</p>

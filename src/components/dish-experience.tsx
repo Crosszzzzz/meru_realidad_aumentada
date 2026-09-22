@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import '@google/model-viewer'
 import type { ModelViewerElement } from '@google/model-viewer'
-import { Box, LoaderCircle, Move, Pause, Play, RotateCcw, ScanLine, Smartphone } from 'lucide-react'
+import { ArrowUpRight, Box, LoaderCircle, Move, Pause, Play, RotateCcw, ScanLine, Smartphone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { signatureDish as dish, formatPrice } from '@/data/menu'
@@ -193,7 +193,7 @@ export default function DishExperience({ intent }: { intent: ViewerIntent }) {
           <Button className="primary-button ar-button" disabled={!loaded || !canAR || failed || launching} onClick={activateAR}>
             {launching ? <LoaderCircle className="loading-spinner" /> : <ScanLine />}
             {launching ? 'Abriendo AR…' : 'Ver en mi mesa'}
-            {!launching && <span aria-hidden="true">↗</span>}
+            {!launching && <ArrowUpRight size={17} strokeWidth={2} aria-hidden="true" />}
           </Button>
           <p className="ar-availability">
             <Smartphone size={14} aria-hidden="true" />
